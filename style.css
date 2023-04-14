@@ -81,7 +81,6 @@ table {
     width: 100%;
     border-collapse: collapse; /* Para juntar os espaçamentos do Tr */
     /*        eixo x, eixo y, sombram, espalhamento*/
-    box-shadow: 0rem 0rem 3rem 3rem rgba(253, 9, 9, 0.3);
 }
 table * {
     font-size: 1.4rem;
