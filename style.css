@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 62.5%;
+    --ff-primary: 'Roboto', sans-serif;
+    --text-color: #FFFFFF;
+    --bg-color:#000000;
+    --bg-table:#092D38;
+
+
+    --hue: 194;
+    --primary-color: hsl(var(--hue), 100%, 63%)
+}
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+body * { /* Todos os seletores dentro do body, vão receber essa variável */
+    font-family: var(--ff-primary);
+}
+header button {
+    background-color: #065E7C;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 3.2rem;
+    gap: .8rem;
+    width: 17rem;
+    height: 4.8rem;
+    border-radius: 0 1rem 1rem 0;
+    cursor: pointer;
+    border: none;
+}
+header input {
+    display: flex;
+    align-items: center;
+    width: 46.2rem;
+    height: 4.8rem;
+    background: #06181C;
+    cursor: pointer;
+    border-radius: 1rem 0 0 1rem;
+    border: none;
+    padding: 1.6rem;
+    color: white;
+}
+header button:hover, header button:hover svg path {
+    background-color: #FFFFFF;
+    color: #065E7C;
+    fill:#065E7C;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+.search {
+    display: flex;
+}
+#app {
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 4rem ;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8.7rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse; /* Para juntar os espaçamentos do Tr */
+    /*        eixo x, eixo y, sombram, espalhamento*/
+    box-shadow: 0rem 0rem 3rem 3rem rgba(253, 9, 9, 0.3);
+}
+table * {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+table th {
+    background: var(--bg-table);
+    text-align: left;
+    font-weight: 700;
+    padding: 1.5rem;
+}
+table th:first-child {
+    border-top-left-radius: 1.2rem
+}
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+table td {
+    padding: 2.4rem;
+    text-align: left;
+}
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+td.user a {
+    text-decoration: none;
+}
+td.user a p {
+    font-weight: 700;
+}
+table tr:nth-child(odd) {
+    background:hsla(195, 61%, 6%, 0.5);
+}
+table tr:nth-child(even) {
+    background: hsla(192, 65%, 7%, 1);
+}
+.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover; /* Ajusta a imagem o mais largamente possível e mantém sua proporção (a imagem não fica esticada). A imagem "cobre" o container inteiro, tanto em altura como em largura */
+    border-radius: 50%;
+}
+.remove {
+    background: transparent;
+    border: none;
+    color:#F75A68;
+    cursor: pointer;
+}
